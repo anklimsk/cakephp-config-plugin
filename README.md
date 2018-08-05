@@ -44,3 +44,14 @@ Configure::write('SomePluginName.param', 'newValue');
 ```php
 $this->initConfig(true);
 ```
+6. For initialize plugin configuration, use:
+```php
+App::uses('InitConfig', 'CakeConfigPlugin.Utility');
+$pluginName = 'SomePluginName';
+$checkPath = 'SomePluginName.param';
+$configFile = 'somepluginname';
+$initConfig = new InitConfig($pluginName, $checkPath, $configFile);
+
+$force = false;
+$initConfig->initConfig($force);
+```
