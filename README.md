@@ -39,9 +39,8 @@ CakePlugin::load('CakeConfigPlugin', ['bootstrap' => true]);
 5. If you need to overwrite the configuration parameter in the application, use:
 ```php
 Configure::write('SomePluginName.param', 'newValue');
-```
-    After, in Model call:
-```php
+
+//  After, in Model call:
 $this->initConfig(true);
 ```
 6. For initialize plugin configuration, use:
