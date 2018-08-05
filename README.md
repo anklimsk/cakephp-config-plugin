@@ -25,9 +25,8 @@ CakePlugin::load('CakeConfigPlugin', ['bootstrap' => true]);
             'checkPath' => 'SomePluginName.param'
         ]
     ];
-
-2. Create a configuration file in the `Config` directory of your plug-in, e.g.:` somepluginname.php`
-    
+```
+2. Create a configuration file in the `Config` directory of your plug-in, e.g.:` somepluginname.php` 
 3. Fill configuration file, e.g.:
 ```php
     $config['SomePluginName'] = [
@@ -35,10 +34,8 @@ CakePlugin::load('CakeConfigPlugin', ['bootstrap' => true]);
         ...
     ];
 ```
-
 4. If necessary, copy config file from 'app/Plugin/SomePluginName/Config/somepluginname.php' to 'app/Config',
     and edit it.
-    
 5. If you need to overwrite the configuration parameter in the application, use:
 ```php
 Configure::write('SomePluginName.param', 'newValue');
