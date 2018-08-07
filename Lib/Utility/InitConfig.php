@@ -11,6 +11,7 @@
 
 App::uses('Inflector', 'Utility');
 App::uses('Hash', 'Utility');
+App::uses('PhpReader', 'Configure');
 
 /**
  * Plugin configuration library.
