@@ -18,6 +18,10 @@ matrix:
         - CODECOVERAGE=1
     - php: 7.1
       env:
+        - PHPCS=1
+        - PHPCS_IGNORE=Plugin/CakeExtendTest/
+    - php: 7.1
+      env:
         - FOC_VALIDATE=1
 
 before_script:
@@ -30,7 +34,9 @@ script:
   - ../travis/script.sh
 
 after_success:
-  - ../travis/after_success.sh
+  - if [ -f "../cakephp/app/clover.xml" ]; then cp ../cakephp/app/clover.xml ../cakephp/app/Plugin/$PLUGIN_NAME; fi
+  - if [ -d "../cakephp/app/Plugin/$PLUGIN_NAME" ]; then cd ../cakephp/app/Plugin/$PLUGIN_NAME; fi
+  - if [ "$CODECOVERAGE" == '1' ]; then wget -O codecov.sh https://codecov.io/bash; bash codecov.sh; fi
 
 notifications:
   email: false
