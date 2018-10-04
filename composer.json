@@ -18,6 +18,9 @@
         "source": "https://github.com/anklimsk/cakephp-config-plugin"
     },
     "extra": {
-        "installer-name": "CakeConfigPlugin"
+        "installer-name": "CakeConfigPlugin",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
