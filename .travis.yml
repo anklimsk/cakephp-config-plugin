@@ -10,6 +10,7 @@ cache:
 
 env:
   global:
+    - COMPOSER_ROOT_VERSION=dev-master
     - PLUGIN_NAME=CakeConfigPlugin
     - REQUIRE="anklimsk/cakephp-console-installer"
     - DB=mysql
